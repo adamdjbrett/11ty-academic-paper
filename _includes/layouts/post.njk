@@ -1,0 +1,56 @@
+---
+layout: layouts/base.njk
+---
+{% import "macros/icons.njk" as icons %}
+{% set paperData = paper or site.paperDefaults %}
+{% set venueName = (paperData.venue and paperData.venue.name) or "" %}
+{% set venueDate = (paperData.venue and paperData.venue.date) or date %}
+{% set venueUrl = (paperData.venue and paperData.venue.url) or (paperData.buttons | buttonUrl("paper")) or ((page.url or "/") | absoluteUrl(site.url)) %}
+<main aria-label="Content">
+  <div class="container">
+    <article itemscope itemtype="http://schema.org/BlogPosting">
+      <header class="header">
+        <h1 itemprop="name headline">{{ title }}</h1>
+        {% if paperData.authors and paperData.authors.length %}
+          <h2>
+            <span itemprop="author">
+              {% for author in paperData.authors %}
+                <a href="{{ author.url or ((page.url or '/') ~ '#') }}">{{ author.name }}</a>{% if not loop.last %}, {% endif %}{% if author.contribution %}<sup><small>*</small></sup>{% endif %}
+              {% endfor %}
+            </span>
+          </h2>
+        {% endif %}
+        {% if paperData.contribution %}
+          <p><sup><small>*</small></sup>{{ paperData.contribution }}</p>
+        {% endif %}
+        {% if paperData.buttons and paperData.buttons.length %}
+          <div>
+            {% for button in paperData.buttons %}
+              <a class="btn" href="{{ button.url }}">
+                {% if not button.no_icon %}
+                  {{ icons.icon((button.name or "") | lower) }}
+                  &nbsp;
+                {% endif %}
+                {{ button.name }}
+              </a>
+            {% endfor %}
+          </div>
+        {% endif %}
+        {% if venueName %}
+          <h2>
+            <a href="{{ venueUrl }}">
+              <span itemprop="isPartOf" itemscope itemtype="http://schema.org/Periodical"><span itemprop="name">{{ venueName }}</span></span>
+              {% if venueDate %}&nbsp;<time datetime="{{ venueDate | isoDate }}" itemprop="datePublished">{{ venueDate | yearDate }}</time>{% endif %}
+            </a>
+          </h2>
+        {% endif %}
+      </header>
+      <div class="content" itemprop="articleBody" id="content">
+        {{ content | safe }}
+      </div>
+      {% if site.footerText %}
+        <footer class="footer">{{ site.footerText | safe }}</footer>
+      {% endif %}
+    </article>
+  </div>
+</main>

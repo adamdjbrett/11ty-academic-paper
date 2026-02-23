@@ -1,0 +1,18 @@
+/* THEME PORT CREDIT */
+Theme: Academic Paper
+Original Theme Homepage: https://github.com/aterenin/academic-paper
+Original Theme Author: Alexander Terenin
+Original Theme License: MIT
+Original Theme Demo: https://aterenin.github.io/academic-paper
+
+/* GITHUB AUTHORS / CONTRIBUTORS (from git history) */
+Contributors:
+- aterenin <aterenin@users.noreply.github.com>
+- Alexander Terenin <aterenin@users.noreply.github.com>
+- Luís Marques <lfsm01@hotmail.com>
+
+Co-authors:
+- (none detected)
+
+/* TECHNOLOGY */
+Built with: Eleventy 3.1.2, ESM, Nunjucks, Luxon

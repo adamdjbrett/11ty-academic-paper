@@ -1,0 +1,173 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/main.css">
+  
+  
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css" as="style" onload="this.rel='stylesheet';">
+<script defer src="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.js"></script>
+<script>
+  window.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll("code").forEach((node) => {
+      const text = node.innerText;
+      if (text.startsWith("$") && text.endsWith("$")) {
+        const span = document.createElement("span");
+        katex.render(text.slice(1, -1), span);
+        node.parentNode.replaceChild(span, node);
+      }
+    });
+    document.querySelectorAll("pre code:not([class])").forEach((node) => {
+      const lines = Array.from(node.childNodes).map((item) => item.innerText || "").filter(Boolean);
+      if (lines.length >= 2 && lines[0].trim().startsWith("$$") && lines[lines.length - 1].trim().startsWith("$$")) {
+        const body = lines.slice(1, -1).join(" ");
+        const pre = node.parentNode;
+        const p = document.createElement("p");
+        katex.render(body, p, { displayMode: true });
+        pre.parentNode.replaceChild(p, pre);
+      }
+    });
+  });
+</script>
+
+  
+  <title>Welcome to Academic Paper</title>
+  
+    <meta name="author" content="Alexander Terenin">
+  
+  
+    <meta name="description" content="Initial post for the Eleventy port of Academic Paper.">
+    <meta property="og:description" content="Initial post for the Eleventy port of Academic Paper.">
+  
+  <meta property="og:title" content="Welcome to Academic Paper">
+  <link rel="canonical" href="http://localhost:8080/posts/2026-01-01-welcome/">
+  <meta property="og:url" content="http://localhost:8080/posts/2026-01-01-welcome/">
+  <meta property="og:image" content="http://localhost:8080/card.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:type" content="article">
+  
+    <meta name="twitter:card" content="summary">
+  
+  <meta property="twitter:image" content="http://localhost:8080/card.png">
+  <meta property="twitter:title" content="Welcome to Academic Paper">
+</head>
+<body>
+  
+
+
+
+
+<main aria-label="Content">
+  <div class="container">
+    <article itemscope itemtype="http://schema.org/BlogPosting">
+      <header class="header">
+        <h1 itemprop="name headline">Welcome to Academic Paper</h1>
+        
+          <h2>
+            <span itemprop="author">
+              
+                <a href="https://avt.im/">Alexander Terenin</a>
+              
+            </span>
+          </h2>
+        
+        
+        
+          <div>
+            
+              <a class="btn" href="https://aterenin.github.io/academic-paper">
+                
+                  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path d="M416 221.25V416a48 48 0 01-48 48H144a48 48 0 01-48-48V96a48 48 0 0148-48h98.75a32 32 0 0122.62 9.37l141.26 141.26a32 32 0 019.37 22.62z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/><path d="M256 56v120a32 32 0 0032 32h120M176 288h160M176 368h160" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg>
+
+  
+
+                  &nbsp;
+                
+                Paper
+              </a>
+            
+              <a class="btn" href="https://aterenin.github.io/academic-paper">
+                
+                  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path d="M336 176h40a40 40 0 0140 40v208a40 40 0 01-40 40H136a40 40 0 01-40-40V216a40 40 0 0140-40h40" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M176 272l80 80 80-80M256 48v288"/></svg>
+
+  
+
+                  &nbsp;
+                
+                PDF
+              </a>
+            
+              <a class="btn" href="https://github.com/aterenin/academic-paper">
+                
+                  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M160 368L32 256l128-112M352 368l128-112-128-112M304 96l-96 320"/></svg>
+
+  
+
+                  &nbsp;
+                
+                Code
+              </a>
+            
+              <a class="btn" href="https://aterenin.github.io/academic-paper">
+                
+                  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><rect x="48" y="80" width="416" height="272" rx="32" ry="32" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M256 416v-64M256 80V48M400 464l-32-112M112 464l32-112"/></svg>
+
+  
+
+                  &nbsp;
+                
+                Poster
+              </a>
+            
+              <a class="btn" href="https://aterenin.github.io/academic-paper">
+                
+                  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path d="M448 256c0-106-86-192-192-192S64 150 64 256s86 192 192 192 192-86 192-192z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/><path fill="currentColor" d="M216.32 334.44l114.45-69.14a10.89 10.89 0 000-18.6l-114.45-69.14a10.78 10.78 0 00-16.32 9.31v138.26a10.78 10.78 0 0016.32 9.31z"/></svg>
+
+  
+
+                  &nbsp;
+                
+                Video
+              </a>
+            
+          </div>
+        
+        
+          <h2>
+            <a href="https://github.com/aterenin/academic-paper">
+              <span itemprop="isPartOf" itemscope itemtype="http://schema.org/Periodical"><span itemprop="name">GitHub</span></span>
+              &nbsp;<time datetime="2026-01-01T00:00:00.000Z" itemprop="datePublished">2026</time>
+            </a>
+          </h2>
+        
+      </header>
+      <div class="content" itemprop="articleBody" id="content">
+        <p>This is the first post in the Eleventy port of <strong>Academic Paper</strong>.</p>
+
+      </div>
+      
+        <footer class="footer">This website is built using <a href="https://www.getzola.org">Zola</a> and the <a href="http://github.com/aterenin/academic-paper/">Academic Paper</a> theme, which is <a href="https://jeffhuang.com/designed_to_last/">designed to last</a>.</footer>
+      
+    </article>
+  </div>
+</main>
+
+</body>
+</html>

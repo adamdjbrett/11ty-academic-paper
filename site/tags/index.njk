@@ -1,0 +1,14 @@
+---
+layout: layouts/post.njk
+title: Tags
+permalink: /tags/
+paper:
+  buttons: []
+  katex: false
+---
+<h1>Tags</h1>
+<ul>
+  {% for tag in collections.tagList %}
+    <li><a href="/tags/{{ tag | slugify }}/">{{ tag }}</a></li>
+  {% endfor %}
+</ul>
