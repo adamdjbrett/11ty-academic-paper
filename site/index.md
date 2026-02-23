@@ -1,6 +1,6 @@
 ---
 layout: layouts/post.njk
-title: "Academic Paper Zola Theme"
+title: "Academic Paper"
 description: "A blog-post-style website to facilitate scientific communication of an academic paper."
 permalink: /
 paper:
@@ -56,4 +56,3 @@ Academic Paper is [designed to last](https://jeffhuang.com/designed_to_last/): a
 {% for post in collections.posts %}
 - [{{ post.data.title }}]({{ post.url }})
 {% endfor %}
-

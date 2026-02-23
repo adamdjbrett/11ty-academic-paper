@@ -2,7 +2,7 @@ const isProduction = process.env.ELEVENTY_ENV === "production";
 const productionUrl = process.env.SITE_URL || "https://example.com";
 
 export default {
-  title: "Academic Paper Zola Theme",
+  title: "Academic Paper",
   description: "A blog-post-style website for scientific communication of an academic paper.",
   language: "en",
   author: "Alexander Terenin",
@@ -15,7 +15,7 @@ export default {
   themeDemo: "https://aterenin.github.io/academic-paper",
   themeAuthor: "Alexander Terenin",
   themeLicense: "MIT",
-  footerText: 'This website is built using <a href="https://www.getzola.org">Zola</a> and the <a href="http://github.com/aterenin/academic-paper/">Academic Paper</a> theme, which is <a href="https://jeffhuang.com/designed_to_last/">designed to last</a>.',
+  footerText: 'This website is built using <a href="https://www.11ty.dev/">Eleventy</a> and the <a href="http://github.com/aterenin/academic-paper/">Academic Paper</a> theme, which is <a href="https://jeffhuang.com/designed_to_last/">designed to last</a>.',
   serverSideKatex: true,
   largeCard: false,
   favicon: false,
@@ -35,8 +35,8 @@ export default {
   },
   navigation: [
     { label: "Home", url: "/" },
-    { label: "Blog", url: "/blog/" },
     { label: "About", url: "/about/" },
+    { label: "Blog", url: "/blog/" },
     { label: "Contact", url: "/contact/" }
   ]
 };
